@@ -1,0 +1,92 @@
+/** the chat dialog appear animation **/
+@keyframes chatAppear {
+    70% { transform: translateY(-20%); }
+    80% { transform: translateY(-20%); }
+    100% { opacity: 1; transform: none; }
+}
+
+.animation-appear {
+    opacity: 0;
+    transform: translateY(75%);
+
+    animation: 750ms chatAppear;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+    transform-origin: bottom center;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .animation-appear {
+        animation-duration: 1ms;
+    }
+}
+      
+        /* Ambient Screensaver Animations */
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.85; filter: drop-shadow(0 0 15px rgba(255,255,255,0.4)); }
+            50% { transform: scale(1.04); opacity: 1; filter: drop-shadow(0 0 30px rgba(255,255,255,0.7)); }
+        }
+        .screensaver-action {
+            animation: pulse-glow 2.5s infinite ease-in-out;
+        }
+
+        @keyframes bg-slide {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1e3a8a, #0f172a, #0d9488, #115e59);
+            background-size: 400% 400%;
+            animation: bg-slide 15s infinite ease-in-out;
+        }
+
+        /* Simulated Thermal Receipt Styles */
+        .thermal-receipt {
+            background-color: #fafafa;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            background-image: linear-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 100% 2.25rem;
+            position: relative;
+        }
+        .thermal-receipt::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(-135deg, transparent 5px, #fafafa 0), linear-gradient(135deg, transparent 5px, #fafafa 0);
+            background-size: 10px 10px;
+        }
+
+        /* Touch sound-responsive tap effects */
+        .ripple-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+        .ripple-btn:active {
+            transform: scale(0.97);
+            box-shadow: inset 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        #KioskBoard-VirtualKeyboard {
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3) !important;
+            border-top: 4px solid #0d9488 !important;
+            background: #0f172a !important;
+            border-radius: 2rem 2rem 0 0 !important;
+            padding: 1.5rem 1rem !important;
+            z-index: 999999 !important;
+        }
+        .kioskboard-key {
+            border-radius: 0.75rem !important;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15) !important;
+            font-weight: 600 !important;
+            background-color: #1e293b !important;
+            color: #ffffff !important;
+        }
+        .kioskboard-key:active {
+            background-color: #0d9488 !important;
+        }

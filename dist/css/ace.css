@@ -18710,7 +18710,6 @@ a[data-toggle="collapse"]:not(.collapsed) .toggle-icon[class*="-right"], .accord
 .ace-aside.aside-center .modal-dialog {
   width: 500px;
   max-width: calc(100vw - 1rem);
-  max-height: calc(100% - );
   max-height: calc(100% - var(--navbar-height));
 }
 
@@ -18744,7 +18743,6 @@ a[data-toggle="collapse"]:not(.collapsed) .toggle-icon[class*="-right"], .accord
 }
 
 .ace-aside {
-  /**
     .modal-content.scroll-body {
         max-height: 100%;
         overflow: hidden;
@@ -18754,7 +18752,6 @@ a[data-toggle="collapse"]:not(.collapsed) .toggle-icon[class*="-right"], .accord
             flex: 2 1 auto;
         }
     }
-    */
 }
 
 .ace-aside .modal-content.scroll-content {

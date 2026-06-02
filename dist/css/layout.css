@@ -1,0 +1,133 @@
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            user-select: none;
+        }
+
+        .heading-font {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* High Fidelity Figma Background Photo Overlay */
+        .bg-blue-photo-overlay {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 32, 67, 0.85)), url('https://static2.bigstockphoto.com/5/7/4/large1500/475603217.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }  
+
+        /* Animated Linear Gradient Shift Layer (Overlay mode) */
+        .animated-gradient-overlay {
+            background: linear-gradient(-45deg, rgba(20, 184, 166, 0.15), rgba(99, 102, 241, 0.15), rgba(13, 148, 136, 0.2), rgba(6, 78, 59, 0.15));
+            background-size: 400% 400%;
+            animation: bg-slide 10s infinite ease-in-out;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes bg-slide {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Frosted Glass / Blurred Square Element Design */
+        .blur-backdrop {
+            backdrop-filter: blur(20px) saturate(190%);
+            -webkit-backdrop-filter: blur(20px) saturate(190%);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .blur-backdrop-dark {
+            backdrop-filter: blur(20px) saturate(190%);
+            -webkit-backdrop-filter: blur(20px) saturate(190%);
+            background-color: rgba(15, 23, 42, 0.65);
+        }
+
+        /* Custom Floating Labels with Single-Column Padding */
+        .input-floating-container {
+            position: relative;
+            width: 100%;
+        }
+        .input-floating-container input, .input-floating-container select {
+            padding-top: 1.75rem !important;
+            padding-bottom: 0.5rem !important;
+            height: 4rem !important;
+        }
+        .input-floating-container label {
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        .input-floating-container input:focus ~ label,
+        .input-floating-container input:not(:placeholder-shown) ~ label,
+        .input-floating-container select:focus ~ label,
+        .input-floating-container select:not([value=""]) ~ label,
+        .input-floating-container select:valid ~ label {
+            top: 0.65rem;
+            transform: translateY(0);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #0f766e;
+        }
+
+        /* Pulse glow animation for the screensaver actions */
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.9; filter: drop-shadow(0 0 15px rgba(20, 184, 166, 0.4)); }
+            50% { transform: scale(1.03); opacity: 1; filter: drop-shadow(0 0 30px rgba(20, 184, 166, 0.7)); }
+        }
+        .screensaver-action {
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+
+        /* Thermal Receipt Simulation Paper Effect */
+        .thermal-receipt {
+            background-color: #fcfcfc;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            background-image: linear-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 100% 2.25rem;
+            position: relative;
+        }
+        .thermal-receipt::after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(-135deg, transparent 6px, #fcfcfc 0), linear-gradient(135deg, transparent 6px, #fcfcfc 0);
+            background-size: 12px 12px;
+        }
+
+        /* Sound-responsive touch animations */
+        .ripple-btn {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+        .ripple-btn:active {
+            transform: scale(0.96);
+            box-shadow: inset 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Custom KioskBoard layout integration aesthetics */
+        #KioskBoard-VirtualKeyboard {
+            box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.45) !important;
+            border-top: 4px solid #0f766e !important;
+            background: #0f172a !important;
+            border-radius: 2rem 2rem 0 0 !important;
+            padding: 1.5rem 1.25rem !important;
+        }
+        .kioskboard-key {
+            border-radius: 0.65rem !important;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15) !important;
+            font-weight: 700 !important;
+            height: 3.5rem !important;
+        }
